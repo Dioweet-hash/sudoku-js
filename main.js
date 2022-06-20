@@ -65,7 +65,7 @@ function start(){
     x = "Size: " + width + "x" + height;
     //document.getElementsByClassName("size-info")[0].innerHTML = x;
     arrayWorker();
-    //clearGrid();
+    clearGrid();
 }
 
 
