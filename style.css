@@ -53,22 +53,33 @@ html{
     grid-auto-rows: 40px;
 }
 
-button{
+.grid button:enabled{
     font-size: 25px;
-    border-radius: 5px ;
+    border-radius: 0px ;
     padding: 5px;
+    border: 1px solid black;   
 }
+
+.grid button:disabled{
+    font-size: 25px;
+    border-radius: 0px ;
+    padding: 5px;
+    border: 1px solid black;      
+    color: black;
+    background-color: rgb(166, 166, 173);
+}
+
 
 .size-info{
     margin: 0px;
-    padding: 10px;
+    padding: 0.1px;
 }
 
 .win{
     background-color: mediumspringgreen;
     border-radius: 10px;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10pxd;
 }
 
 

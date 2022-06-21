@@ -45,17 +45,31 @@ function clearGrid(){
         var randomnumber = Math.floor(Math.random() * 9) + 1;
         if(randomnumber >5){
             document.getElementById(i).style.backgroundColor = "white";
-            document.getElementById(i).innerHTML = "";}
+            document.getElementById(i).innerHTML = "";
+            }
+        else{
+            document.getElementById(i).disabled = true;
+            document.getElementById(i).style.backgroundColor = "gray";
+            
+        }
     }
 }
 
-
+function whiteAllGrid(){
+    for(let i = 1; i <= size; i++){
+        //document.getElementById(i).style.backgroundColor = "white";
+        document.getElementById(i).innerHTML = "";
+    }
+}
 
 
 
 function start(){
     document.getElementsByClassName("menu")[0].style.display = 'none';
     document.getElementsByClassName("main-container")[0].style.display = 'grid';
+    document.getElementsByClassName("win")[0].style.display = 'none';
+    document.getElementById("err-count").innerHTML = '0';
+    whiteAllGrid();
 
     height = 9;
     width = 9;
@@ -65,7 +79,7 @@ function start(){
     x = "Size: " + width + "x" + height;
     //document.getElementsByClassName("size-info")[0].innerHTML = x;
     arrayWorker();
-    //clearGrid();
+    clearGrid();
 }
 
 
